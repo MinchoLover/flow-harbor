@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 async function getImpact() {
   const res = await fetch(
     "http://localhost:3000/api/impact-score",
@@ -39,6 +41,14 @@ export default async function ImpactPage() {
             <p>Stay Time: {data.stayTimeScore}</p>
             <p>Local Commerce: {data.localCommerceScore}</p>
             <p>Congestion Avoidance: {data.congestionAvoidanceScore}</p>
+          </div>
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/"
+              className="rounded-full border border-cyan-400 px-8 py-4 font-semibold text-cyan-300"
+            >
+              다시 시작하기
+            </Link>
           </div>
         </div>
       </section>

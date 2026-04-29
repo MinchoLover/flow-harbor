@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 async function getMissions() {
   const res = await fetch(
     "http://localhost:3000/api/missions",
@@ -54,6 +56,14 @@ export default async function MissionsPage() {
               </div>
             </article>
           ))}
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/impact"
+              className="rounded-full bg-cyan-400 px-8 py-4 font-semibold text-black"
+            >
+              Local Impact Score 확인
+            </Link>
+          </div>
         </div>
       </section>
     </main>

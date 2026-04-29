@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 export default function HeroSection() {
   const dotsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -54,6 +55,15 @@ export default function HeroSection() {
           AI 기반 흐름 재분배를 통해
           도시 전체로 확장합니다.
         </p>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/places"
+            className="rounded-full bg-cyan-400 px-8 py-4 font-semibold text-black transition hover:scale-105"
+          >
+            실시간 관광 흐름 보기
+          </Link>
+        </div>
       </div>
 
       <div className="absolute inset-0 flex items-center justify-center">

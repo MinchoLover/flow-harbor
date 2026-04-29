@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import Link from "next/link";
 
 export default async function PlacesPage() {
   const places = await prisma.place.findMany({
@@ -76,6 +77,14 @@ export default async function PlacesPage() {
               </div>
             </article>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          <Link
+            href="/missions"
+            className="rounded-full bg-cyan-400 px-8 py-4 font-semibold text-black"
+          >
+            대체 관광 미션 보기
+          </Link>
         </div>
       </section>
     </main>
